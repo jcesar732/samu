@@ -1,4 +1,14 @@
 <!--The whole content below can be removed with the new code.-->
 <div style="text-align:center" class="title">
-  <h1>{{title}}</h1>
+  <h1>Title of Bad</h1>
+</div><div class="divofbad" style="text-align:center">
+  <h2>{{minha_uf.nome}}</h2>
 </div>
+<p style="text-align:center">ID: {{brasil_uf.id}}</p>
+<p style="text-align:center">Média municípios atendidos: {{media}}</p>
+<p style="text-align:center">Área: {{brasil_uf.area}}</p>
+<ul style="text-align:center">
+  <li *ngFor="let mun of municipios_atendidos">
+    Ano: {{mun.ano}} Quantidade: {{mun.valor}}
+  </li>
+</ul>
