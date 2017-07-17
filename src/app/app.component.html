@@ -1,13 +1,19 @@
 <!--The whole content below can be removed with the new code.-->
 
 <div style="text-align:center" class="title">
-  <h1 style="text-align:center">{{minha_uf.nome}}</h1>
+  <h1 style="text-align:center">
+    {{minha_uf.nome}}</h1>
 </div>
-<div style="text-align:center;" class="desespero"><p>ID: {{minha_uf.id}}</p>
-<p>Área: {{minha_uf.area}}</p>
-<p>Média municípios atendidos: {{media}}</p>
+<div style="text-align:center;"
+class="desespero"><p><b>ID:
+</b> {{minha_uf.id}}</p>
+<p><b>Área:</b> {{minha_uf.area}}</p>
+<p><b>Média municípios atendidos:
+</b> {{media}}</p>
 <ul>
-  <li *ngFor="let mun of municipios_atendidos">
-    Ano: {{mun.ano}} Quantidade: {{mun.valor}}
+  <li *ngFor=
+  "let mun of municipios_atendidos">
+    <b>Ano:</b> {{mun.ano}} - 
+    <b>Quantidade:</b> {{mun.valor}}
   </li>
 </ul></div>

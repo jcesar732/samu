@@ -1,6 +1,22 @@
 .title{
     background-color: blue;
+    float: middle;
+    position: relative;
+    top: -20px;
+    font-style: italic;
 }
 .desespero{
-    background-color: red;
+    background-color: green;
+    float: middle;
+    position: relative;
+    top: -40px;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 10em;
+}
+.desespero b{
+    color: #EEC900;
+}
+.desespero:hover{
+
 }
