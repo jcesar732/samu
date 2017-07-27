@@ -10,16 +10,14 @@ import {UFs} from './services/mock-ufs'
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [UFService, SamuService]
+  templateUrl: './dados_uf.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class dados_ufComponent implements OnInit {
     ufs : UF[];
     dados_da_samu : Dados[];
     id = 25
     uf: UF;
-    media: number;
     samu: Dados[];
 
     constructor(private ufService: UFService, private samuService: SamuService)
@@ -29,7 +27,6 @@ export class AppComponent implements OnInit {
         this.ufs = this.ufService.getAll();
         this.dados_da_samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
         this.uf = this.ufService.getUF(this.id);
-        this.media = this.samuService.geMediaMunicipios(this.id);
         this.samu = this.samuService.getMunicipiosPorAno(this.uf);
     }
 }

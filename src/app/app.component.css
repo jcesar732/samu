@@ -1,22 +1,27 @@
 .title{
     background-color: blue;
     float: middle;
+    color: white;
     position: relative;
-    top: -20px;
-    font-style: italic;
+    font-style: normal;
+    font-size: 12px;
+      -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;  border-radius: 10em;
 }
 .desespero{
-    background-color: green;
     float: middle;
-    position: relative;
-    top: -40px;
-    -webkit-border-radius: 2em;
-    -moz-border-radius: 2em;
-    border-radius: 10em;
+    position: relative;    text-decoration: green;
+  /*  top: -40px;  -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;  border-radius: 10em;  */
 }
-.desespero b{
-    color: #EEC900;
-}
-.desespero:hover{
 
+.desespero a{
+      text-align: center;
+      color: green;
 }
+.desespero a:link{
+  text-decoration: none;
+  text-align: center;
+  text-decoration-color: red;
+}
+.desespero:hover{}

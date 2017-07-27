@@ -6,23 +6,27 @@ import {UFService} from './services/uf.service'
 import {Dados} from './types/samu';
 import {SamuService} from './services/samu.service'
 
-import {UFs} from './services/mock-ufs'
+import {DadoNome} from './types/modelonovo';
+import {ModeloNovoService} from './services/modelonovo.service'
+
+import {UFs} from './services/mock-ufs';
+import {VALORES} from './services/mock-samu_municipios_atendidos_por_estado';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [UFService, SamuService]
+  templateUrl: './todos_dados.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class todos_dadosComponent implements OnInit {
     ufs : UF[];
     dados_da_samu : Dados[];
     id = 25
     uf: UF;
     media: number;
     samu: Dados[];
+    dados: DadoNome[];
 
-    constructor(private ufService: UFService, private samuService: SamuService)
+    constructor(private ufService: UFService, private samuService: SamuService, private modeloNovoService: ModeloNovoService)
     { }
 
     ngOnInit(): void {
@@ -31,5 +35,7 @@ export class AppComponent implements OnInit {
         this.uf = this.ufService.getUF(this.id);
         this.media = this.samuService.geMediaMunicipios(this.id);
         this.samu = this.samuService.getMunicipiosPorAno(this.uf);
+        this.dados = this.modeloNovoService.mesclardados();
     }
+
 }
